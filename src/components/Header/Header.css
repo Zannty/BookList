@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  height: 60px;
+  background-color: rgb(211, 211, 211);
+  padding: 0.3em;
+  border-bottom: 4px double black;
+  font-family: "Oswald", sans-serif;
+}
+.main-title {
+  font-weight: bold;
+}
+.search {
+  display: flex;
+  max-width: 100%;
+  margin-left: auto;
+  letter-spacing: 2px;
+}
+.input-search {
+  padding-right: 10px;
+  margin-right: 10px;
+  margin-left: 2px;
+}
+.select-search {
+  margin-right: 10px;
+  margin-left: 2px;
+}
+.btn-search {
+  height: 2.3em;
+}

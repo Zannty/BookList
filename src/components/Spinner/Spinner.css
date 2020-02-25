@@ -1,0 +1,96 @@
+@keyframes ldio-svds2neh2qb-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes ldio-svds2neh2qb-2 {
+  0% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(225deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+.ldio-svds2neh2qb > div:nth-child(2) {
+  transform: translate(-15px, 0);
+}
+.ldio-svds2neh2qb > div:nth-child(2) div {
+  position: absolute;
+  top: 44.800000000000004px;
+  left: 44.800000000000004px;
+  width: 134.4px;
+  height: 67.2px;
+  border-radius: 134.4px 134.4px 0 0;
+  background: #297b7c;
+  animation: ldio-svds2neh2qb-1 0.9803921568627451s linear infinite;
+  transform-origin: 67.2px 67.2px;
+}
+.ldio-svds2neh2qb > div:nth-child(2) div:nth-child(2) {
+  animation: ldio-svds2neh2qb-2 0.9803921568627451s linear infinite;
+}
+.ldio-svds2neh2qb > div:nth-child(2) div:nth-child(3) {
+  transform: rotate(-90deg);
+  animation: none;
+}
+@keyframes ldio-svds2neh2qb-3 {
+  0% {
+    transform: translate(212.8px, 0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(78.4px, 0);
+    opacity: 1;
+  }
+}
+.ldio-svds2neh2qb > div:nth-child(1) {
+  display: block;
+}
+.ldio-svds2neh2qb > div:nth-child(1) div {
+  position: absolute;
+  top: 103.04px;
+  left: -8.96px;
+  width: 17.92px;
+  height: 17.92px;
+  border-radius: 50%;
+  background: #5bcde1;
+  animation: ldio-svds2neh2qb-3 0.9803921568627451s linear infinite;
+}
+.ldio-svds2neh2qb > div:nth-child(1) div:nth-child(1) {
+  animation-delay: -0.6834s;
+}
+.ldio-svds2neh2qb > div:nth-child(1) div:nth-child(2) {
+  animation-delay: -0.3366s;
+}
+.ldio-svds2neh2qb > div:nth-child(1) div:nth-child(3) {
+  animation-delay: 0s;
+}
+.loadingio-spinner-bean-eater-6tfjat6yvvk {
+  width: 224px;
+  height: 224px;
+  display: inline-block;
+  overflow: hidden;
+  background: white;
+}
+.ldio-svds2neh2qb {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.ldio-svds2neh2qb div {
+  box-sizing: content-box;
+}

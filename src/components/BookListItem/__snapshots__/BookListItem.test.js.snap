@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookListItem render props 1`] = `
+"<div className=\\"book-list-item\\">
+  <div className=\\"cover\\">
+    <img src=\\"x\\" />
+  </div>
+  <div className=\\"property-item\\">
+    <div>
+      Название книги: 
+      q
+    </div>
+    <div>
+      Автор: 
+      z
+    </div>
+    <div>
+      Жанр: 
+      y
+    </div>
+  </div>
+</div>"
+`;
