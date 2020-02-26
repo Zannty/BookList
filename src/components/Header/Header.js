@@ -2,17 +2,21 @@ import React from "react";
 import "./Header.css";
 import { inputChange, selectChange, buttonUse } from "./../../actions/action";
 import { connect } from "react-redux";
-const Header = ({
+export const Header = ({
   inputChange,
   search,
   selectedItem,
   selectChange,
   buttonUse
 }) => {
+  const sub = e => {
+    e.preventDefault();
+    buttonUse();
+  };
   return (
     <div className="header">
       <h2 className="main-title">Список книг</h2>
-      <div className="search">
+      <form onSubmit={sub} className="search">
         Критерий поиска
         <select
           value={selectedItem}
@@ -31,10 +35,14 @@ const Header = ({
           onChange={e => inputChange(e.target.value)}
           value={search}
         />
-        <button onClick={buttonUse} className="btn btn-secondary btn-search">
+        <button
+          type="submit"
+          onClick={sub}
+          className="btn btn-secondary btn-search"
+        >
           Применить
         </button>
-      </div>
+      </form>
     </div>
   );
 };

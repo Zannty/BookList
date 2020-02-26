@@ -57,6 +57,7 @@ describe("reducer test", () => {
     let action = buttonUse();
     expect(reducer(state, action)).toEqual({
       ...state,
+      search: "",
       renderData: [{ author: "y", name: "z", genre: "y" }]
     });
   });
@@ -76,6 +77,7 @@ describe("reducer test", () => {
     let action = buttonUse();
     expect(reducer(state, action)).toEqual({
       ...state,
+      search: "",
       renderData: [
         { author: "x", name: "y", genre: "z" },
         { author: "y", name: "x", genre: "z" },

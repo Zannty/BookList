@@ -6,7 +6,12 @@ import { connect } from "react-redux";
 import { fetchRequest, fetchSuccess } from "./../../actions/action";
 import Spinner from "./../Spinner/Spinner";
 
-const BookList = ({ fetchRequest, fetchSuccess, loading, renderData }) => {
+export const BookList = ({
+  fetchRequest,
+  fetchSuccess,
+  loading,
+  renderData
+}) => {
   useEffect(() => {
     const bookListService = new BookListService();
     fetchRequest();
@@ -14,6 +19,13 @@ const BookList = ({ fetchRequest, fetchSuccess, loading, renderData }) => {
   }, []);
 
   if (loading) return <Spinner />;
+
+  if (renderData.length === 0)
+    return (
+      <h2>
+        К сожалению по вашему запросу ничего не найдено, попробуйте еще раз.
+      </h2>
+    );
 
   return (
     <ul className="list-group">

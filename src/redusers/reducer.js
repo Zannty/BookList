@@ -40,6 +40,7 @@ export const reducer = (state = initialState, action) => {
 
       return {
         ...state,
+        search: "",
         renderData: newArr.filter(el => {
           if (selectedItem === "def")
             return (

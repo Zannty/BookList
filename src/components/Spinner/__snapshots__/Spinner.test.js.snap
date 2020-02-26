@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner snap Spinner 1`] = `
+"<div className=\\"loadingio-spinner-bean-eater-6tfjat6yvvk\\">
+  <div className=\\"ldio-svds2neh2qb\\">
+    <div>
+      <div />
+      <div />
+      <div />
+    </div>
+    <div>
+      <div />
+      <div />
+      <div />
+    </div>
+  </div>
+</div>"
+`;

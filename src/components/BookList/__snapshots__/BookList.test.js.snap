@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookList BookList snap 1`] = `
+"<BookList fetchRequest={[Function: mockConstructor]} loading={false} renderData={{...}}>
+  <ul className=\\"list-group\\">
+    <li className=\\"list-group-item\\">
+      <BookListItem book={{...}}>
+        <div className=\\"book-list-item\\">
+          <div className=\\"cover\\">
+            <img src=\\"x\\" />
+          </div>
+          <div className=\\"property-item\\">
+            <div>
+              Название книги: 
+              q
+            </div>
+            <div>
+              Автор: 
+              z
+            </div>
+            <div>
+              Жанр: 
+              y
+            </div>
+          </div>
+        </div>
+      </BookListItem>
+    </li>
+  </ul>
+</BookList>"
+`;
