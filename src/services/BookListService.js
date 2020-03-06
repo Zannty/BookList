@@ -128,12 +128,19 @@ export default class BookListService {
       photo: "https://cdn1.ozone.ru/multimedia/c1200/1024199555.jpg"
     }
   ];
-
-  getBooks() {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(this.data);
-      }, 2000);
-    });
+  url = "https://jsonplaceholder.typicode.com/posts";
+  option = {
+    method: "POST",
+    body: JSON.stringify(this.data),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  };
+  async getBooks() {
+    const response = await fetch(this.url, this.option);
+    let data = await response.json();
+    let arr = Object.values(data);
+    arr.pop();
+    return arr;
   }
 }
