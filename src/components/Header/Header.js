@@ -5,7 +5,7 @@ import {
   handleFilterAuthorChange,
   handleFilterGenreChange,
   handleFilterNameChange,
-  buttonUse
+  handleApplyFilter
 } from "./../../actions/action";
 import { connect } from "react-redux";
 export const Header = ({
@@ -14,11 +14,11 @@ export const Header = ({
   handleFilterAuthorChange,
   handleFilterGenreChange,
   handleFilterNameChange,
-  buttonUse
+  handleApplyFilter
 }) => {
   const sub = e => {
     e.preventDefault();
-    buttonUse();
+    handleApplyFilter();
   };
   return (
     <div className="header">
@@ -75,7 +75,7 @@ const mapDispatchToProps = dispatch => {
     handleFilterAuthorChange: () => dispatch(handleFilterAuthorChange()),
     handleFilterGenreChange: () => dispatch(handleFilterGenreChange()),
     handleFilterNameChange: () => dispatch(handleFilterNameChange()),
-    buttonUse: () => dispatch(buttonUse())
+    handleApplyFilter: () => dispatch(handleApplyFilter())
   };
 };
 

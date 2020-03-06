@@ -10,7 +10,7 @@ export const BookList = ({
   fetchRequest,
   fetchSuccess,
   loading,
-  renderData
+  visibleBooks
 }) => {
   useEffect(() => {
     const bookListService = new BookListService();
@@ -22,7 +22,7 @@ export const BookList = ({
 
   if (loading) return <Spinner />;
 
-  if (renderData.length === 0)
+  if (visibleBooks.length === 0)
     return (
       <h2>
         К сожалению по вашему запросу ничего не найдено, попробуйте еще раз.
@@ -31,7 +31,7 @@ export const BookList = ({
 
   return (
     <ul className="list-group">
-      {renderData.map(el => {
+      {visibleBooks.map(el => {
         return (
           <li key={el.id} className="list-group-item">
             <BookListItem book={el} />
@@ -41,9 +41,9 @@ export const BookList = ({
     </ul>
   );
 };
-const mapStateToProps = ({ renderData, loading }) => {
+const mapStateToProps = ({ visibleBooks, loading }) => {
   return {
-    renderData,
+    visibleBooks,
     loading
   };
 };

@@ -1,6 +1,6 @@
 const initialState = {
   data: [],
-  renderData: [],
+  visibleBooks: [],
   loading: false,
   filterSearchValue: "",
   author: false,
@@ -20,7 +20,7 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         data: action.payload,
-        renderData: action.payload,
+        visibleBooks: action.payload,
         loading: false
       };
     }
@@ -48,13 +48,13 @@ export const reducer = (state = initialState, action) => {
         name: !state.name
       };
     }
-    case "CHANGE_RENDER_DATA": {
+    case "CHANGE_VISIBLE_BOOKS": {
       const { data, filterSearchValue } = state;
       const newArr = data.slice();
 
       return {
         ...state,
-        renderData: newArr.filter(el => {
+        visibleBooks: newArr.filter(el => {
           if (state.name && state.author)
             return (
               el.name.toLowerCase().includes(filterSearchValue.toLowerCase()) ||

@@ -31,8 +31,8 @@ export const handleFilterNameChange = () => {
     type: "SEARCH_NAME_CHANGE"
   };
 };
-export const buttonUse = () => {
+export const handleApplyFilter = () => {
   return {
-    type: "CHANGE_RENDER_DATA"
+    type: "CHANGE_VISIBLE_BOOKS"
   };
 };
