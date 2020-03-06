@@ -10,16 +10,25 @@ export const fetchSuccess = data => {
     payload: data
   };
 };
-export const inputChange = text => {
+export const handleInputChange = text => {
   return {
     type: "SEARCH_INPUT_CHANGE",
     payload: text
   };
 };
-export const selectChange = val => {
+export const handleFilterAuthorChange = () => {
   return {
-    type: "SEARCH_SELECT_CHANGE",
-    payload: val
+    type: "SEARCH_AUTHOR_CHANGE"
+  };
+};
+export const handleFilterGenreChange = () => {
+  return {
+    type: "SEARCH_GENRE_CHANGE"
+  };
+};
+export const handleFilterNameChange = () => {
+  return {
+    type: "SEARCH_NAME_CHANGE"
   };
 };
 export const buttonUse = () => {

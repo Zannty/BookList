@@ -128,6 +128,7 @@ export default class BookListService {
       photo: "https://cdn1.ozone.ru/multimedia/c1200/1024199555.jpg"
     }
   ];
+
   getBooks() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {

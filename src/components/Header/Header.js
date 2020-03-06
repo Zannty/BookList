@@ -1,12 +1,19 @@
 import React from "react";
 import "./Header.css";
-import { inputChange, selectChange, buttonUse } from "./../../actions/action";
+import {
+  handleInputChange,
+  handleFilterAuthorChange,
+  handleFilterGenreChange,
+  handleFilterNameChange,
+  buttonUse
+} from "./../../actions/action";
 import { connect } from "react-redux";
 export const Header = ({
-  inputChange,
-  search,
-  selectedItem,
-  selectChange,
+  handleInputChange,
+  filterSearchValue,
+  handleFilterAuthorChange,
+  handleFilterGenreChange,
+  handleFilterNameChange,
   buttonUse
 }) => {
   const sub = e => {
@@ -17,23 +24,33 @@ export const Header = ({
     <div className="header">
       <h2 className="main-title">Список книг</h2>
       <form onSubmit={sub} className="search">
-        Критерий поиска
-        <select
-          value={selectedItem}
-          onChange={e => selectChange(e.target.value)}
-          className="custom-select select-search"
-        >
-          <option value="def">По умолчанию</option>
-          <option value="name">По названию</option>
-          <option value="author">По автору</option>
-          <option value="genre">По жанру</option>
-        </select>
+        Критерии поиска
+        <p className="checkbox-filter">
+          Название
+          <input type="checkbox" value="a2" onChange={handleFilterNameChange} />
+        </p>
+        <p className="checkbox-filter">
+          Автор
+          <input
+            type="checkbox"
+            value="a3"
+            onChange={handleFilterAuthorChange}
+          />
+        </p>
+        <p className="checkbox-filter">
+          Жанр
+          <input
+            type="checkbox"
+            value="a4"
+            onChange={handleFilterGenreChange}
+          />
+        </p>
         Поиск
         <input
           className="form-control form-control-sm input-search"
           type="text"
-          onChange={e => inputChange(e.target.value)}
-          value={search}
+          onChange={e => handleInputChange(e.target.value)}
+          value={filterSearchValue}
         />
         <button
           type="submit"
@@ -46,17 +63,18 @@ export const Header = ({
     </div>
   );
 };
-const mapStateToProps = ({ search, selectedItem }) => {
+const mapStateToProps = ({ filterSearchValue }) => {
   return {
-    search,
-    selectedItem
+    filterSearchValue
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    inputChange: text => dispatch(inputChange(text)),
-    selectChange: val => dispatch(selectChange(val)),
+    handleInputChange: text => dispatch(handleInputChange(text)),
+    handleFilterAuthorChange: () => dispatch(handleFilterAuthorChange()),
+    handleFilterGenreChange: () => dispatch(handleFilterGenreChange()),
+    handleFilterNameChange: () => dispatch(handleFilterNameChange()),
     buttonUse: () => dispatch(buttonUse())
   };
 };

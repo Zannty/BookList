@@ -15,7 +15,9 @@ export const BookList = ({
   useEffect(() => {
     const bookListService = new BookListService();
     fetchRequest();
-    bookListService.getBooks().then(data => fetchSuccess(data));
+    bookListService.getBooks().then(data => {
+      fetchSuccess(data);
+    });
   }, []);
 
   if (loading) return <Spinner />;
