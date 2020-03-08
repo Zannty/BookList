@@ -33,6 +33,12 @@ export const handleFilterNameChange = () => {
 };
 export const handleApplyFilter = () => {
   return {
-    type: "CHANGE_VISIBLE_BOOKS"
+    type: "CHANGE_FILTERED_BOOKS"
+  };
+};
+export const handleChangeCurrentPage = page => {
+  return {
+    type: "CHANGE_CURRENT_PAGE",
+    payload: page
   };
 };

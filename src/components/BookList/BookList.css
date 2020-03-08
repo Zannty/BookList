@@ -1,0 +1,12 @@
+.current-page {
+  font-weight: bold;
+}
+.pages {
+  margin-left: 50em;
+  margin-right: auto;
+  letter-spacing: 0.3em;
+  font-size: 20px;
+}
+.pages:hover {
+  cursor: pointer;
+}
